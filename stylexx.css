@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: linear-gradient(135deg, #e8f0e7, #f8f2e5);
+}
+
+body {
+  width: min(100% - 32px, 720px);
+  margin: 8vh auto;
+  padding: clamp(24px, 5vw, 48px);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 18px 55px rgba(31, 65, 49, 0.14);
+  color: #26372e;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  margin: 0 0 10px;
+  color: #214a36;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+}
+
+body > p {
+  margin: 0 0 30px;
+  color: #68766d;
+  font-size: 1.05rem;
+}
+
+.first-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.first-head input {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 14px;
+  border: 1px solid #d6ded5;
+  border-radius: 9px;
+  background: #fbfcfa;
+  color: #26372e;
+  font: inherit;
+}
+
+.first-head input::placeholder {
+  color: #7b877e;
+}
+
+.first-head input:focus {
+  border-color: #467a54;
+  outline: 3px solid rgba(70, 122, 84, 0.16);
+}
+
+.second-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.second-head button {
+  min-height: 48px;
+  padding: 11px 18px;
+  border: 1px solid #214a36;
+  border-radius: 9px;
+  background: #214a36;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.second-head button:hover {
+  transform: translateY(-1px);
+  background: #173a2a;
+}
+
+.second-head button:last-of-type {
+  border-color: #d6ded5;
+  background: #fff;
+  color: #214a36;
+}
+
+.second-head button:last-of-type:hover {
+  background: #f3f6f1;
+}
+
+#travelor {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 14px;
+  border-radius: 9px;
+  background: #f3f6f1;
+  color: #43564a;
+}
+
+@media (max-width: 520px) {
+  body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 28px 18px;
+    border-radius: 0;
+  }
+
+  .first-head {
+    grid-template-columns: 1fr;
+  }
+}
